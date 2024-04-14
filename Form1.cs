@@ -90,7 +90,7 @@ namespace InstagramFollowersDesktop
             dokumanTakipci.LoadHtml(htmlTakipci);
             for (int i = 1; i <= takipciSayi; i++)
             {
-                HtmlNodeCollection titlesTakipci = dokumanTakipci.DocumentNode.SelectNodes("body/div[2]/div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/div[1]/div/div["+i+"]/div/div/div/div[2]/div/div/div/div/div/a/div/div/span");
+                HtmlNodeCollection titlesTakipci = dokumanTakipci.DocumentNode.SelectNodes("/body/div[6]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/div[1]/div/div["+i+"]/div/div/div/div[2]/div/div/div/div/div/a/div/div/span");
                 foreach (HtmlNode title in titlesTakipci)
                 {
                     takipci[i] = (title.InnerText.Trim());
@@ -131,7 +131,7 @@ namespace InstagramFollowersDesktop
             dokumanTakipEdilen.LoadHtml(htmlTakipEdilen);
             for (int i = 1; i <= takipEdilenSayi; i++)
             {
-                HtmlNodeCollection titlesTakipEdilen = dokumanTakipEdilen.DocumentNode.SelectNodes("body/div[2]/div/div/div[3]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[4]/div/div/div["+i+"]/div/div/div/div[2]/div/div/div/div/div/a/div/div/span");                                                                  
+                HtmlNodeCollection titlesTakipEdilen = dokumanTakipEdilen.DocumentNode.SelectNodes("/body/div[6]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[4]/div[1]/div/div["+i+"]/div/div/div/div[2]/div/div/div/div/div/a/div/div/span");                                                                  
                 foreach (HtmlNode title in titlesTakipEdilen)
                 {
                     takipEdilen[i] = (title.InnerText.Trim());
@@ -162,19 +162,28 @@ namespace InstagramFollowersDesktop
 
         public void GetData()
         {
-            GetCount();
-
-            if(max>0)
+            try
             {
-                GetFollowers();
-                GetFollow();
-                ToDataGrid();
+                GetCount();
+
+                if (max > 0)
+                {
+                    GetFollowers();
+                    GetFollow();
+                    ToDataGrid();
+                }
+                else
+                {
+                    durumLabel.Text = "İşlem Başarısız";
+                    MessageBox.Show("İşlem Başarısız.");
+                }
             }
-            else
+            catch
             {
                 durumLabel.Text = "İşlem Başarısız";
                 MessageBox.Show("İşlem Başarısız.");
             }
+           
         }
 
         private void listeleButton_Click(object sender, EventArgs e)
@@ -189,11 +198,20 @@ namespace InstagramFollowersDesktop
 
         private void kaydetButton_Click(object sender, EventArgs e)
         {
-            FollowersDownload();
-            FollowDownload();
+            try
+            {
+                FollowersDownload();
+                FollowDownload();
 
-            durumLabel.Text = "Kayıt Tamamlandı";
-            MessageBox.Show("Kayıt Tamamlandı.");
+                durumLabel.Text = "Kayıt Tamamlandı";
+                MessageBox.Show("Kayıt Tamamlandı.");
+            }
+            catch
+            {
+                durumLabel.Text = "İşlem Başarısız";
+                MessageBox.Show("İşlem Başarısız.");
+            }
+           
         }
 
         private void reportToolStripButton_Click(object sender, EventArgs e)
