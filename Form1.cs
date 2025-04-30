@@ -20,7 +20,7 @@ namespace InstagramFollowersDesktop
             NetControl();
         }
 
-        public static string guncelSurum = "1.1";
+        public static string guncelSurum = "1.2";
 
         private void NetControl()
         {
@@ -90,7 +90,7 @@ namespace InstagramFollowersDesktop
             dokumanTakipci.LoadHtml(htmlTakipci);
             for (int i = 1; i <= takipciSayi; i++)
             {
-                HtmlNodeCollection titlesTakipci = dokumanTakipci.DocumentNode.SelectNodes("/body/div[6]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/div[1]/div/div["+i+"]/div/div/div/div[2]/div/div/div/div/div/a/div/div/span");
+                HtmlNodeCollection titlesTakipci = dokumanTakipci.DocumentNode.SelectNodes("/body/div[4]/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/div[1]/div/div["+i+"]/div/div/div/div[2]/div/div/div/div/span/div/a/div/div/span");
                 foreach (HtmlNode title in titlesTakipci)
                 {
                     takipci[i] = (title.InnerText.Trim());
@@ -131,7 +131,7 @@ namespace InstagramFollowersDesktop
             dokumanTakipEdilen.LoadHtml(htmlTakipEdilen);
             for (int i = 1; i <= takipEdilenSayi; i++)
             {
-                HtmlNodeCollection titlesTakipEdilen = dokumanTakipEdilen.DocumentNode.SelectNodes("/body/div[6]/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[4]/div[1]/div/div["+i+"]/div/div/div/div[2]/div/div/div/div/div/a/div/div/span");                                                                  
+                HtmlNodeCollection titlesTakipEdilen = dokumanTakipEdilen.DocumentNode.SelectNodes("/body/div[4]/div[2]/div/div/div[1]/div/div[2]/div/div/div/div/div[2]/div/div/div[3]/div/div/div["+i+"]/div/div/div/div[2]/div/div/div/div/span/div/a/div/div/span");                                                                  
                 foreach (HtmlNode title in titlesTakipEdilen)
                 {
                     takipEdilen[i] = (title.InnerText.Trim());

@@ -28,6 +28,6 @@ G:\Dosyalar\Projelerim\Geliştirdiğim Uygulamalar\InstagramFollowers\InstagramF
 G:\Dosyalar\Projelerim\Geliştirdiğim Uygulamalar\InstagramFollowers\InstagramFollowersDesktop\obj\Debug\InstagramFollowersDesktop.Update.resources
 G:\Dosyalar\Projelerim\Geliştirdiğim Uygulamalar\InstagramFollowers\InstagramFollowersDesktop\obj\Debug\InstagramFollowersDesktop.csproj.GenerateResource.cache
 G:\Dosyalar\Projelerim\Geliştirdiğim Uygulamalar\InstagramFollowers\InstagramFollowersDesktop\obj\Debug\InstagramFollowersDesktop.csproj.CoreCompileInputs.cache
-G:\Dosyalar\Projelerim\Geliştirdiğim Uygulamalar\InstagramFollowers\InstagramFollowersDesktop\obj\Debug\InstagramFollowersDesktop.csproj.CopyComplete
 G:\Dosyalar\Projelerim\Geliştirdiğim Uygulamalar\InstagramFollowers\InstagramFollowersDesktop\obj\Debug\Insta-Followers.exe
 G:\Dosyalar\Projelerim\Geliştirdiğim Uygulamalar\InstagramFollowers\InstagramFollowersDesktop\obj\Debug\Insta-Followers.pdb
+G:\Dosyalar\Projelerim\Geliştirdiğim Uygulamalar\InstagramFollowers\InstagramFollowersDesktop\obj\Debug\Instagra.11DD3E7C.Up2Date
